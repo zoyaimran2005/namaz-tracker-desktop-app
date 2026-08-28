@@ -1,0 +1,220 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+@font-face{
+  font-family: "pixel" ;
+  src:url("assets/Ithaca.ttf")format("opentype");
+
+}
+body {
+  width: 250px;          
+  height: 420px;         
+  background-color: transparent; 
+  overflow: hidden;       
+  user-select: none;     
+  -webkit-app-region: drag; }
+
+.app {
+  width: 100%;
+  height: 100%;
+  padding: 16px;
+  border: 10px solid rgba(112, 60, 125, 0.732);
+  background-color: rgba(238, 163, 245, 0.639); 
+  background-image: url("assets/stars moon GIF.gif");
+  border-radius: 30px; 
+  background-blend-mode: overlay;
+  background-size: cover;
+  animation: fadeIn 0.3s ease-out forwards;  }
+
+  
+  .header{
+    display:flex;
+    border-radius: 5px;
+    background-color: rgba(214, 122, 220, 0.739);
+    color:rgb(72, 23, 63);
+    height: 50px;
+    width: 200px;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 3px 10px 3px;
+    letter-spacing: 5px;
+    font-family: pixel, sans-serif;
+    font-size:x-large;
+    box-shadow: 0 4px 10px rgba(57, 11, 60, 0.4);
+    margin: 0 0 10px 0;
+  }
+  .menu{
+    justify-content: center; 
+    align-items: center;
+    padding: 20px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    -webkit-app-region: no-drag
+
+  }
+ * button{
+    background-color: rgba(214, 122, 220, 0.476);
+    color:rgb(72, 23, 63);
+    border-radius: 50px;
+    border: 3px dashed rgba(76, 12, 80, 0.601);
+    display: flex;
+    width: 180px;
+    height: 50px;
+    justify-content: center;
+    font-family: pixel,sans-serif;
+    font-weight: bold;
+    font-size: larger;
+    letter-spacing: 2px;
+    align-items: center;
+    
+    -webkit-app-region: no-drag
+    
+  }
+  
+* button:hover{
+  box-shadow: 0 4px 10px rgba(57, 11, 60, 0.4);
+  transform: translateY(-2px);
+  transition: all 0.2s ease;
+  background: linear-gradient(135deg,rgba(88, 22, 92, 0.4));
+  cursor: pointer;
+
+}
+a{
+  text-decoration: none;
+  color:inherit;
+}
+.date{
+  display:flex;
+  border-radius: 5px;
+  background-color: rgba(214, 122, 220, 0.476);
+  color:rgba(76, 12, 80, 0.835);
+  height: max-content;
+  width: max-content;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 3px 10px 3px;
+  letter-spacing: 1px;
+  font-family: pixel, sans-serif;
+  font-size:x-large;
+  box-shadow: 0 4px 10px rgba(57, 11, 60, 0.4);
+  -webkit-app-region: no-drag; 
+  
+
+}
+.prayer-list{
+  -webkit-app-region: no-drag; 
+  display:flex;
+  flex-direction:column;
+  border-radius: 6px;
+  background: linear-gradient(135deg,rgba(88, 22, 92, 0.4));
+  box-shadow: 0 4px 10px rgba(57, 11, 60, 0.4);
+  align-items: center;
+  justify-content: center;
+  gap:10px;
+  margin:20px;
+  padding:5px;
+  height:170px;
+  font-size: 20px;
+}
+.prayer-item{
+  color:rgb(47, 14, 41);
+  font-family: pixel,sans-serif;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+.reminder-card{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding:15px;
+  margin:15px;
+  height:200px;
+  font-family: pixel,sans-serif;
+  color:rgb(47, 14, 41);
+
+}
+.bell-img{
+  height:100px;
+  width: 100px;
+  display: flex;
+  animation: bellPulse 1.8s infinite ease-in-out;
+ 
+}
+input,
+textarea,
+select {
+  -webkit-app-region: no-drag; 
+  cursor: pointer;
+}
+.prayer-checkbox {
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+  accent-color: rgb(76, 12, 80); /* Dark purple theme */
+  border: 2px solid rgb(59, 108, 148);
+  border-radius: 4px;
+}
+
+.prayer-checkbox:checked {
+  transform: scale(1.25);
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+@keyframes bellPulse {
+  0% { transform: scale(1) rotate(0deg); }
+  25% { transform: scale(1.15) rotate(12deg); }
+  50% { transform: scale(1.15) rotate(-12deg); }
+  75% { transform: scale(1.15) rotate(8deg); }
+  100% { transform: scale(1) rotate(0deg); }
+}
+/* Gentle floating up-and-down animation */
+@keyframes float {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-6px) rotate(8deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+.floating-icon {
+  display: flex;
+  font-size: 28px;
+  animation: float 2.5s infinite ease-in-out;
+  
+}
+.summary-card{
+  font-family: pixel,sans-serif;
+  padding:10px;
+}
+.date-picker{
+  display: flex;
+   flex-direction: column; 
+   gap: 4px; 
+   width: 100%; 
+   margin-bottom: 15px; 
+   font-family: pixel,sans-serif;
+   font-size: 16px; text-align: left; opacity: 0.9;
+  
+}
+.cal{
+  background-color: rgba(115, 44, 88, 0.48);
+  width: 100%; padding: 4px; border-radius: 6px; border: none; font-size: 20px; font-family: pixel,sans-serif;
+  color:rgb(47, 14, 41);
+}

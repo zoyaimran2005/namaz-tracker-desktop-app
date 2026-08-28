@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracker</title>
+    <link rel="stylesheet" href="styles.css" />
+
+</head>
+<body>
+    <div class="app" >
+    
+        <!-- Top Header -->
+        <div class="header">
+          Daily Tracker
+        </div>
+    <div class="date" style="gap: 10px">
+        <div id="day">MONDAY</div>
+        <div id="month">AUGUST</div>
+        <div id="date">21</div>
+      </div>
+  
+      <!-- 5 Prayers List -->
+      <div class="prayer-list" >
+        
+        <div class="prayer-item">
+          <span class="prayer-name">Fajr</span>
+          <input type="checkbox" id="fajr" class="prayer-checkbox" />
+        </div>
+  
+        <div class="prayer-item">
+          <span class="prayer-name">Dhuhr</span>
+          <input type="checkbox" id="dhuhr" class="prayer-checkbox" />
+        </div>
+  
+        <div class="prayer-item">
+          <span class="prayer-name">Asr</span>
+          <input type="checkbox" id="asr" class="prayer-checkbox" />
+        </div>
+  
+        <div class="prayer-item">
+          <span class="prayer-name">Maghrib</span>
+          <input type="checkbox" id="maghrib" class="prayer-checkbox" />
+        </div>
+  
+        <div class="prayer-item">
+          <span class="prayer-name">Isha</span>
+          <input type="checkbox" id="isha" class="prayer-checkbox" />
+        </div>
+  
+      </div>
+  
+      <div class="buttons" style="display:flex; gap:5px">
+      <a href="index.html" class="back-link" >
+        <button type="submit" class="back-btn" style="width: 100px">← Back</button>
+      </a>
+
+      <a href="index.html" class="submit-link">
+        <button type="submit" class="submit-button" style="width: 100px">submit</button>
+      </a>
+      </div>
+</div>
+   <script src="script.js"></script>
+</body>
+</html>

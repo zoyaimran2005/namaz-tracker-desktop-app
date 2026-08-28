@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Record</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class="app">
+        
+        <div class="header">
+          Track Record
+        </div>
+
+        <!-- Date Picker Input -->
+        <div class="date-picker">
+          <label for="history-date-picker" >Select Date:</label>
+          <input type="date" id="history-date-picker" class="cal">
+        </div>
+
+        <!-- Selected Date Prayer Breakdown -->
+        <div class="prayer-list" id="history-prayer-list" style="gap: 5px; margin: 10px; font-size: larger; height:200px">
+          <!-- Dynamically populated via script.js -->
+        </div>
+
+        <!-- Back Link -->
+        <div class="buttons" style="display:flex; gap: 1px; margin-top: 1px; padding:0px; ">
+          <a href="index.html" class="back-link">
+            <button type="button" class="back-btn" style="width: 70px; ">Back</button>
+          </a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
