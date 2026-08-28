@@ -10,37 +10,31 @@
     "start": "electron .",
     "package": "electron-builder"
   },
-  "build": {
+ "build": {
     "appId": "com.namaztracker.app",
     "productName": "Namaz Tracker",
-    "publish": {
-      "provider": "github",
-      "owner": "zoyaimran2005",
-      "repo": "namaz-tracker-desktop-app",
-      "override": true
-    },
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "zoyaimran2005",
+        "repo": "namaz-tracker-desktop-app"
+      }
+    ],
     "files": [
       "**/*"
     ],
     "mac": {
       "category": "public.app-category.lifestyle",
-      "target": [
-        "dmg",
-        "zip"
-      ],
+      "target": ["dmg", "zip"],
       "icon": "assets/icons8-moon-100.icns"
     },
     "win": {
-      "target": [
-        "nsis",
-        "portable"
-      ],
+      "target": ["nsis", "portable"],
       "icon": "assets/icons8-moon-100.ico"
     },
     "linux": {
-      "target": [
-        "AppImage"
-      ],
+      "target": ["AppImage"],
+      "category": "Utility",
       "icon": "assets/icons8-moon-100.png"
     }
   },
