@@ -18,19 +18,28 @@
     ],
     "mac": {
       "category": "public.app-category.lifestyle",
-      "target": ["dmg", "zip"],
+      "target": [
+        "dmg",
+        "zip"
+      ],
       "icon": "assets/icons8-moon-100.icns"
     },
     "win": {
-      "target": ["nsis", "portable"],
+      "target": [
+        "nsis",
+        "portable"
+      ],
       "icon": "assets/icons8-moon-100.ico"
     },
     "linux": {
+      "target": [
+        "AppImage"
+      ],
       "icon": "assets/icons8-moon-100.png"
     }
   },
   "devDependencies": {
     "electron": "^30.0.0",
-    "electron-builder": "^24.0.0"
+    "electron-builder": "^24.13.3"
   }
 }
